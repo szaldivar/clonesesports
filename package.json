@@ -1,0 +1,19 @@
+{
+  "name": "clonesesports",
+  "version": "1.0.0",
+  "description": "Esports web app for tournament management.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZaldivardeA/clonesesports.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ZaldivardeA/clonesesports/issues"
+  },
+  "homepage": "https://github.com/ZaldivardeA/clonesesports#readme"
+}
