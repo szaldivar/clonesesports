@@ -2,9 +2,12 @@
   "name": "clonesesports",
   "version": "1.0.0",
   "description": "Esports web app for tournament management.",
-  "main": "server.js",
+  "main": "build/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "nodemon",
+    "build": "rimraf ./build && tsc",
+    "start": "npm run build && node build/server.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +18,12 @@
   "bugs": {
     "url": "https://github.com/ZaldivardeA/clonesesports/issues"
   },
-  "homepage": "https://github.com/ZaldivardeA/clonesesports#readme"
+  "homepage": "https://github.com/ZaldivardeA/clonesesports#readme",
+  "devDependencies": {
+    "@types/node": "^14.0.23",
+    "nodemon": "^2.0.4",
+    "rimraf": "^3.0.2",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.7"
+  }
 }
