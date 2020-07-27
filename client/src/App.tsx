@@ -1,27 +1,38 @@
 import React from "react";
-import logo from "./logo.svg";
-import { Button } from "antd";
+import { Layout } from "antd";
+import Hero from "./components/Hero/Hero";
+import Navbar from "./components/Navbar/Navbar";
 import "./App.css";
+const { Header, Content, Footer } = Layout;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <Button type="primary">Button</Button>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Layout
+      style={{
+        backgroundSize: "100% 100%"
+      }}
+    >
+      <Header
+        style={{
+          padding: "0",
+          position: "fixed",
+          zIndex: 1,
+          width: "100%",
+          backgroundColor: "transparent"
+        }}
+      >
+        <Navbar />
+      </Header>
+      <Content>
+        <Hero imgUrl="fighters.jpg" title="Clones Esports" />
+        <div
+          style={{
+            height: "2000px"
+          }}
+        ></div>
+      </Content>
+      <Footer style={{ opacity: "0.2" }}>Footer</Footer>
+    </Layout>
   );
 }
 
