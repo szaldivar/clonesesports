@@ -23,16 +23,6 @@ const Navbar: React.FC<NavbarProps> = () => {
 
   return (
     <>
-      <img
-        src="logo192.png"
-        alt="Logo"
-        style={{
-          width: "31px",
-          height: "31px",
-          margin: "16px 24px 16px 24px",
-          float: "left"
-        }}
-      />
       <Menu
         theme="light"
         mode="horizontal"
@@ -42,9 +32,40 @@ const Navbar: React.FC<NavbarProps> = () => {
           borderBottom: 0
         }}
       >
-        <Menu.Item key="1">nav 1</Menu.Item>
-        <Menu.Item key="2">nav 2</Menu.Item>
-        <Menu.Item key="3">nav 3</Menu.Item>
+        <Menu.Item
+          style={{
+            padding: 0
+          }}
+        >
+          <img
+            src="logo_icon.png"
+            alt="Logo"
+            style={{
+              width: "31px",
+              height: "31px",
+              margin: "16px 24px 16px 24px",
+              float: "left"
+            }}
+          />
+        </Menu.Item>
+        <Menu.Item key="1">Tournaments</Menu.Item>
+        <Menu.Item key="2">Games</Menu.Item>
+        <Menu.Item
+          style={{
+            float: "right"
+          }}
+          key="4"
+        >
+          Sign Up
+        </Menu.Item>
+        <Menu.Item
+          style={{
+            float: "right"
+          }}
+          key="3"
+        >
+          Log In
+        </Menu.Item>
       </Menu>
     </>
   );

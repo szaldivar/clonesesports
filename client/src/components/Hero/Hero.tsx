@@ -24,6 +24,7 @@ const Hero: React.FC<HeroProps> = ({ imgUrl, title }) => {
         height: "80vh"
       }}
     >
+      <img src="logo_icon.png" alt="logo" width="126px" height="126px" />
       <Title
         style={{
           width: "500px",
@@ -35,6 +36,20 @@ const Hero: React.FC<HeroProps> = ({ imgUrl, title }) => {
         }}
       >
         {title}
+      </Title>
+      <Title
+        level={3}
+        style={{
+          marginTop: 0,
+          width: "500px",
+          display: "flex",
+          textAlign: "center",
+          alignItems: "center",
+          justifyContent: "center",
+          color: "white"
+        }}
+      >
+        Esports Tournaments taken to the Next Level
       </Title>
     </div>
   );
