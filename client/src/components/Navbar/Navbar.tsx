@@ -1,10 +1,26 @@
-import React from "react";
-import { Menu } from  "antd";
+import React, { useState, useEffect } from "react";
+import { Menu } from "antd";
 
-interface NavbarProps {
-}
+interface NavbarProps {}
 
 const Navbar: React.FC<NavbarProps> = () => {
+  const [isAtTop, setIsAtTop] = useState(true);
+
+  useEffect(() => {
+    window.onscroll = function() {
+      if (window.pageYOffset <= 250) {
+        setIsAtTop(true);
+      } else {
+        if (isAtTop) {
+          setIsAtTop(false);
+        }
+      }
+    };
+    return () => {
+      window.onscroll = null;
+    };
+  }, [isAtTop]);
+
   return (
     <>
       <img
@@ -21,7 +37,7 @@ const Navbar: React.FC<NavbarProps> = () => {
         theme="light"
         mode="horizontal"
         style={{
-          background: "rgba(0,0,0,0.3)",
+          background: isAtTop ? "rgba(0,0,0,0.3)" : "rgba(0,0,0,0.72)",
           color: "#ffffff",
           borderBottom: 0
         }}
